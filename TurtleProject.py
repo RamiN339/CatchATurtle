@@ -37,7 +37,7 @@ def manage_leaderboard():
   print(leader_scores_list)
 
   # TODO
-  if (len(leader_scores_list) < 5 or score > leader_scores_list[4]):
+  if (int(len(leader_scores_list)) < 5 or score > int(leader_scores_list[4])):
     lb.update_leaderboard('a122_leaderboard.txt', leader_names_list, leader_scores_list, player_name, score)
     lb.draw_leaderboard(leader_names_list, leader_scores_list, True, circle, score)
 
